@@ -6,10 +6,7 @@ import com.atguigu.springcloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author mengyue
@@ -23,7 +20,7 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
     @PostMapping("/payment/create")
-    public CommonResult create(Payment payment){
+    public CommonResult create(@RequestBody Payment payment){
         int res = paymentService.insert(payment);
         if(res != 1){
             return new CommonResult(444,"插入数据库失败",null);
