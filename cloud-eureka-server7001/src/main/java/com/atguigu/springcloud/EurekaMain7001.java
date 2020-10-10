@@ -1,26 +1,26 @@
 package com.atguigu.springcloud;/**
  * @Description: java类作用描述
  * @Author: my
- * @CreateDate: 2020/10/7 - 17:39
+ * @CreateDate: 2020/10/10 - 8:51
  */
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @Description: java类作用描述
  * @Author: my
- * @CreateDate: 2020/10/7 17:39
+ * @CreateDate: 2020/10/10 8:51
  * @UpdateUser:
- * @UpdateDate: 2020/10/7 17:39
+ * @UpdateDate: 2020/10/10 8:51
  * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
 @SpringBootApplication
-@EnableEurekaClient
-public class OrderMain80 {
+@EnableEurekaServer
+public class EurekaMain7001 {
     public static void main(String[] args) {
-        SpringApplication.run(OrderMain80.class, args);
+        SpringApplication.run(EurekaMain7001.class,args);
     }
 }
